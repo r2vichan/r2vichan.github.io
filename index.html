@@ -1,3 +1,74 @@
-<html>
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravi Rajappa | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ravi Rajappa</h1>
+        <p>Software Engineer | Data Scientist</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Master's student in Computer Science at Arizona State University with experience in software development, data analysis, and security engineering.</p>
+    </section>
+    
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>Languages: Python, JavaScript, TypeScript, Java, SQL</li>
+            <li>Frameworks: React, Node.js, Express, D3.js, Django</li>
+            <li>Cloud: AWS, Azure, Docker, CI/CD</li>
+        </ul>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul id="projects-list"></ul>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:rrajapp1@asu.edu">rrajapp1@asu.edu</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/ravi-rajappa/" target="_blank">linkedin.com/in/ravi-rajappa</a></p>
+        <p>GitHub: <a href="https://github.com/r2vichan" target="_blank">github.com/r2vichan</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Ravi Rajappa</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const projects = [
+                { name: 'F1 Data Visualization', url: 'https://github.com/r2vichan/f1-data-visualization' },
+                { name: 'Social Media Engagement Prediction', url: 'https://github.com/r2vichan/Proj-Blue-Sky-Prediction' },
+                { name: 'Object Detection Using YOLO', url: 'https://github.com/r2vichan/yolo-detection' }
+            ];
+            
+            const projectsList = document.getElementById("projects-list");
+            projects.forEach(project => {
+                const li = document.createElement("li");
+                const a = document.createElement("a");
+                a.href = project.url;
+                a.textContent = project.name;
+                a.target = "_blank";
+                li.appendChild(a);
+                projectsList.appendChild(li);
+            });
+        });
+    </script>
+</body>
 </html>
